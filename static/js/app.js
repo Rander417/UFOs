@@ -27,31 +27,65 @@ function buildTable(data) {
 }
 
 // Keep track of all filters
-var filters = {datetime: "1/13/2010"};
+//var filters = {datetime: "1/13/2010", city: "ackerman"};
+var filters = {datetime: "", city: "", state: "", country: "", shape: ""};
 
 //CHALLENGE FUNCTION
 // This function will replace your handleClick function
 function updateFilters() {
 
-  // Save the element, value, and id of the filter that was changed
-  let filter_value = d3.select("#datetime").property("value");
-  let filter_id = d3.select("#datetime").property("id");
+  // Save the value, and id of all filters
+  let date_filter_value = d3.select("#datetime").property("value");
+  let date_filter_id = d3.select("#datetime").property("id");
+
+  let city_filter_value = d3.select("#city").property("value");
+  let city_filter_id = d3.select("#city").property("id");
+
+  let state_filter_value = d3.select("#state").property("value");
+  let state_filter_id = d3.select("#state").property("id");
+
+  let country_filter_value = d3.select("#country").property("value");
+  let country_filter_id = d3.select("#country").property("id");
+
+  let shape_filter_value = d3.select("#shape").property("value");
+  let shape_filter_id = d3.select("#shape").property("id");
 
 
-  // If a filter value was entered then add that filterId and value
-  // to the filters list. Otherwise, clear that filter from the filters object
-  //for (x=0; x< Object.keys(filters).length; x++){
-    if (filter_value){
-      filters[filter_id] = filter_value;
-    } else{
-      delete filters.filter_id;
-    }
-  //}
+  //If-else blocks to remove unused filters
+  if (date_filter_value != ""){
+    filters[date_filter_id] = date_filter_value;
+  } else {
+    delete filters.datetime;
+  }
 
-  // console.log(Object.keys(filters).length)
-  // console.log(filter_value)
-  // console.log(filter_id)
-  // console.log(filters)
+  if (city_filter_value != ""){
+    filters[city_filter_id] = city_filter_value;
+  } else {
+    delete filters.city;
+  }
+
+  if (state_filter_value != ""){
+    filters[state_filter_id] = state_filter_value;
+  } else {
+    delete filters.state;
+  }
+
+  if (country_filter_value != ""){
+    filters[country_filter_id] = country_filter_value;
+  } else {
+    delete filters.country;
+  }
+
+  if (shape_filter_value != ""){
+    filters[shape_filter_id] = shape_filter_value;
+  } else {
+    delete filters.shape;
+  }
+
+  console.log(Object.keys(filters).length)
+  console.log(Object.values(filters).length)
+  console.log(filters)
+
   // Call function to apply all filters and rebuild the table
   filterTable();
 }
