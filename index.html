@@ -29,7 +29,7 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-4">
-                <h3>UFO Sightings: Fact of Fancy? <small>Ufologists Weigh In</small></h3>
+                <h3>UFO Sightings: Fact of Fancy? <small><br>Ufologists Weigh In</small></h3>
               </div>
               <div class="col-md-8">
                 <p>
@@ -38,17 +38,33 @@
               </div>
             </div>
           </div>
-          
+
 	</div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
                 <form>
                     <p>Filter Search</p>
-                    <ul>
+                    <ul class="filter-group">
                       <li>
                         <label for="date">Enter Date</label>
                         <input type="text" placeholder="1/10/2010" id="datetime" />
+                      </li>
+                      <li>
+                        <label for="city">Enter City</label>
+                        <input type="text" placeholder="anchorage" id="city" />
+                      </li>
+                      <li>
+                        <label for="state">Enter State</label>
+                        <input type="text" placeholder="ak" id="state" />
+                      </li>
+                      <li>
+                        <label for="country">Enter Country</label>
+                        <input type="text" placeholder="us" id="country" />
+                      </li>
+                      <li>
+                        <label for="shape">Enter Shape</label>
+                        <input type="text" placeholder="chevron" id="shape" />
                       </li>
                       <li>
                          <button id="filter-btn" type="button" class="btn btn-default">
@@ -78,7 +94,7 @@
         </div>
       </div>
 
-<!--Link d3.js, app.js and data.js -->
+<!--Link d3.js, app.js and data.js-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
 <script src="static/js/data.js"></script>
 <script src="static/js/app.js"></script>
