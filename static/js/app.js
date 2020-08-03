@@ -5,8 +5,7 @@ const tableData = data;
 // D3 is a JavaScript library that produces sophisticated and highly dynamic graphics in an HTML webpage
 var tbody = d3.select("tbody");
 
-// Keep track of all filters
-//var filters = {datetime: "1/13/2010", city: "ackerman"};
+// Keep track of filters
 var filters = {datetime: "", city: "", state: "", country: "", shape: ""};
 
 ///////////////////////////////////////////////////////////////////////////////

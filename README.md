@@ -16,5 +16,6 @@ Primarily HTML/CSS/Javascript.
 - The addition of a recommeded videos frame
 - Links to the author's contact information and profile page
 - Refactor the updateFilters() function to use a loop and be able to accomodate a dynamic number of total filters
+- Add a "clear filter" button to reset the table
 
-![]![](readme_images/fullscreen.png)
+![](readme_images/fullscreen.png)
