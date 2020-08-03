@@ -2,7 +2,7 @@
 
 
 ## Summary
-The purpose of this project was to create a website where Dana's recent articale on UFO's could be displayed along with some supporting information. THis presents a very accessibile way to read her material and also sort through the large dataset of sightings.
+The purpose of this project was to create a website where Dana's recent articale on UFO's could be displayed along with some supporting information. This presents a very accessibile way to read her material and also sort through the large dataset of sightings.
 
 
 ## Technoligies used
